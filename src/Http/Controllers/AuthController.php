@@ -2,17 +2,17 @@
 
 namespace Ikoncept\InfabOauth\Http\Controllers;
 
+use Illuminate\Http\RedirectResponse as HttpRedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Laravel\Socialite\Facades\Socialite;
-use Illuminate\Http\RedirectResponse as HttpRedirectResponse;
-use Symfony\Component\HttpFoundation\RedirectResponse;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Laravel\Socialite\Facades\Socialite;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class AuthController extends Controller
 {
-    public function redirectToProvider() : RedirectResponse
+    public function redirectToProvider(): RedirectResponse
     {
         return Socialite::driver('infab')->redirect();
     }
@@ -22,9 +22,9 @@ class AuthController extends Controller
      *
      * @return HttpRedirectResponse
      */
-    public function handleProviderCallback(Request $request) : HttpRedirectResponse
+    public function handleProviderCallback(Request $request): HttpRedirectResponse
     {
-        if($request->has('error')) {
+        if ($request->has('error')) {
             return redirect()->route('login')
                 ->with('permissionError', 'Du avböjde åtkomst till ditt konto');
         }
@@ -47,7 +47,7 @@ class AuthController extends Controller
             $has_access = false;
         }
 
-        if(! $has_access) {
+        if (! $has_access) {
             return redirect()->route('login')
                 ->with('permissionError', 'Du har inte behörighet till denna applikationen');
         }
@@ -60,7 +60,7 @@ class AuthController extends Controller
                     'name' => $user->name,
                     'email' => $user->email,
                     'email_verified_at' => now(),
-                    'password' => bcrypt(Str::random(16))
+                    'password' => bcrypt(Str::random(16)),
                 ]);
                 $newUser->assignRole('admin');
                 Auth::login($newUser, true);

@@ -21,7 +21,7 @@ class InfabOauthServiceProvider extends PackageServiceProvider
         // Route::get('login/infab/callback', [InfabAuthController::class, 'handleProviderCallback']);
     }
 
-    public function register() : void
+    public function register(): void
     {
         $this->app->register(EventServiceProvider::class);
     }

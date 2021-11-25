@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "ikoncept/infab-oauth",
+    "description": "Leverage infab via socialite",
     "keywords": [
-        ":vendor_name",
+        "ikoncept",
         "laravel",
-        ":package_slug"
+        "infab-oauth"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/ikoncept/infab-oauth",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Albin N",
+            "email": "albin@myrmalm.se",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Ikoncept\\InfabOauth\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Ikoncept\\InfabOauth\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +53,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Ikoncept\\InfabOauth\\InfabOauthServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "InfabOauth": "Ikoncept\\InfabOauth\\Facades\\InfabOauth"
             }
         }
     },

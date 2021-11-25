@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Ikoncept\InfabOauth\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class InfabOauthCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'infab-oauth';
 
     public $description = 'My command';
 

@@ -2,9 +2,9 @@
 
 namespace Ikoncept\InfabOauth\Tests;
 
+use Ikoncept\InfabOauth\InfabOauthServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Ikoncept\InfabOauth\InfabOauthServiceProvider;
 
 class TestCase extends Orchestra
 {

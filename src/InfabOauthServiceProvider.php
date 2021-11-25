@@ -4,7 +4,6 @@ namespace Ikoncept\InfabOauth;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Ikoncept\InfabOauth\Commands\InfabOauthCommand;
 
 class InfabOauthServiceProvider extends PackageServiceProvider
 {

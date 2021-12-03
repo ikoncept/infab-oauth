@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 class InfabOauthServiceProvider extends ServiceProvider
 {
-    public function boot() : void
+    public function boot(): void
     {
         $this->publishes([
             __DIR__.'/../config/infab-oauth.php' => config_path('infab-oauth.php'),

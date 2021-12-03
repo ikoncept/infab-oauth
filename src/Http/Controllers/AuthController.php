@@ -54,10 +54,10 @@ class AuthController extends Controller
 
         if (auth()->guest()) {
             $userModel = config('infab-oauth.user_model');
-            $existingUser = (new $userModel)->where('email', $user->email)->first();
+            $existingUser = (new $userModel())->where('email', $user->email)->first();
             if (! $existingUser) {
                 $user->getName();
-                $newUser = (new $userModel)->forceCreate([
+                $newUser = (new $userModel())->forceCreate([
                     'name' => $user->name,
                     'email' => $user->email,
                     'email_verified_at' => now(),

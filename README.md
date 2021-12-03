@@ -42,6 +42,13 @@ return [
 ];
 ```
 
+Add the following to your `.env` file
+```
+INFAB_CLIENT_ID
+INFAB_CLIENT_SECRET
+INFAB_CLIENT_REDIRECT
+```
+
 ## Testing
 
 ```bash

@@ -3,7 +3,6 @@
 namespace Ikoncept\InfabOauth;
 
 use Illuminate\Support\ServiceProvider;
-use Spatie\LaravelPackageTools\Package;
 
 class InfabOauthServiceProvider extends ServiceProvider
 {

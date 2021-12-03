@@ -2,7 +2,6 @@
 
 namespace Ikoncept\InfabOauth;
 
-use Ikoncept\InfabOauth\Http\Controllers\AuthController;
 use Illuminate\Contracts\Routing\Registrar as Router;
 use Illuminate\Support\Facades\Route;
 
@@ -31,7 +30,7 @@ class RouteRegistrar
      *
      * @return void
      */
-    public function all() : void
+    public function all(): void
     {
         Route::get('login/infab',  [\Ikoncept\InfabOauth\Http\Controllers\AuthController::class, 'redirectToProvider']);
         Route::get('login/infab/callback', [\Ikoncept\InfabOauth\Http\Controllers\AuthController::class, 'handleProviderCallback']);
